@@ -1,11 +1,26 @@
+setTimeout(function() {
+  $('#top').slideUp();
+}, 3000);
+
+// $(window).scroll(function(){
+//   $('#bar').slideUp();
+// })
+
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       $('#bottom').slideDown();
+   } else {
+      $('#bottom').slideUp();
+   }
+   lastScrollTop = st;
+});
+
 var poetry, books, alliteration, gertrude, meep, lyricism, enjambment, page, anaphora, whitespace;
 
 var explosions = ['mov/explo1.gif', 'mov/explo2.gif', 'mov/explo3.gif', 'mov/explo4.gif'];
 var sounds = ['mov/sound1.mp3', 'mov/sound2.mp3', 'mov/sound3.mp3', 'mov/sound4.mp3'];
-
-$('body').click(function(){ 
-  document.location.href = 'file:///Users/rkkmistry/Desktop/portfolio/portfolio.html';
-});
 
 Mousetrap.bind('a', function() {
   randExplo();
@@ -105,135 +120,6 @@ function touch() {
 //     $('#poetry').remove();
 //   });
 // });
-
-// Mousetrap.bind('w', function() { 
-//   if ($('#bg').find('#books').length) {
-//     books = document.getElementById('books');
-//     books.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='books' src='mov/books.mp4'></video>");
-//     $('#books').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#books').on('ended',function(){
-//     $('#books').remove();
-//   });
-// });
-
-// Mousetrap.bind('e', function() { 
-//   if ($('#bg').find('#alliteration').length) {
-//     alliteration = document.getElementById('alliteration');
-//     alliteration.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='alliteration' src='mov/alliteration.mp4'></video>");
-//     $('#alliteration').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#alliteration').on('ended',function(){
-//     $('#alliteration').remove();
-//   });
-// });
-
-// Mousetrap.bind('r', function() { 
-//   if ($('#bg').find('#gertrude').length) {
-//     gertrude = document.getElementById('gertrude');
-//     gertrude.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='gertrude' src='mov/gertrude.mp4'></video>");
-//     $('#gertrude').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#gertrude').on('ended',function(){
-//     $('#gertrude').remove();
-//   });
-// });
-
-// Mousetrap.bind('t', function() { 
-//   if ($('#bg').find('#meep').length) {
-//     meep = document.getElementById('meep');
-//     meep.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='meep' src='mov/meep.mp4'></video>");
-//     $('#meep').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#meep').on('ended',function(){
-//     $('#meep').remove();
-//   });
-// });
-
-// Mousetrap.bind('y', function() { 
-//   if ($('#bg').find('#lyricism').length) {
-//     lyricism = document.getElementById('lyricism');
-//     lyricism.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='lyricism' src='mov/lyricism.mp4'></video>");
-//     $('#lyricism').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#lyricism').on('ended',function(){
-//     $('#lyricism').remove();
-//   });
-// });
-
-// Mousetrap.bind('u', function() { 
-//   if ($('#bg').find('#enjambment').length) {
-//     enjambment = document.getElementById('enjambment');
-//     enjambment.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='enjambment' src='mov/enjambment.mp4'></video>");
-//     $('#enjambment').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#enjambment').on('ended',function(){
-//     $('#enjambment').remove();
-//   });
-// });
-
-// Mousetrap.bind('i', function() { 
-//   if ($('#bg').find('#page').length) {
-//     page = document.getElementById('page');
-//     page.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='page' src='mov/page.mp4'></video>");
-//     $('#page').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#page').on('ended',function(){
-//     $('#page').remove();
-//   });
-// });
-
-// Mousetrap.bind('o', function() { 
-//   if ($('#bg').find('#anaphora').length) {
-//     anaphora = document.getElementById('anaphora');
-//     anaphora.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='anaphora' src='mov/anaphora.mp4'></video>");
-//     $('#anaphora').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#anaphora').on('ended',function(){
-//     $('#anaphora').remove();
-//   });
-// });
-
-// Mousetrap.bind('p', function() { 
-//   if ($('#bg').find('#whitespace').length) {
-//     whitespace = document.getElementById('whitespace');
-//     whitespace.currentTime = 0;
-//   } else {
-//     $("#hold").html("<video id='whitespace' src='mov/whitespace.mp4'></video>");
-//     $('#whitespace').attr('autoplay', 'autoplay');
-//   }
-
-//   $('#whitespace').on('ended',function(){
-//     $('#whitespace').remove();
-//   });
-// });
-
-
-
 
 
 
