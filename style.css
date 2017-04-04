@@ -1,0 +1,99 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~INDEX PAGE STYLING~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*Video Background*/
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -1;
+}
+
+#bg video {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -2;
+}
+
+/*For Gif explosions*/
+#gif{
+  z-index: -1;
+  /*So works on Safari*/
+  -webkit-transform: translate3d(0,0,0);
+}
+
+/*For Markov Text*/
+#text {
+  width: 50%;
+  margin: 0 auto;
+  line-height: 2em;
+  font-size: 2em;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~PORTFOLIO PAGE STYLING~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+h1 {
+  text-align: center;
+  font-weight: 400;
+}
+
+#container {
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*Link Styling*/
+a {
+  transition: color .4s;
+  color: #265C83;
+  text-decoration: none;
+}
+
+a:link,
+a:visited { color: #265C83; }
+a:hover   { color: #7FDBFF; }
+a:active  {
+  transition: color .3s;
+  color: #007BE6;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~MOBILE STYLING~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media (max-width: 600px) { 
+  #text {
+    width: 90%;
+    font-size: 1.5em;
+    text-justify: full;
+  }
+
+  #bg {
+    display: none;
+  }
+
+  body {
+    background-image: url('mov/bg-2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+}
+
