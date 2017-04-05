@@ -2,10 +2,6 @@ setTimeout(function() {
   $('#top').slideUp();
 }, 3000);
 
-// $(window).scroll(function(){
-//   $('#bar').slideUp();
-// })
-
 var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
@@ -17,50 +13,69 @@ $(window).scroll(function(event){
    lastScrollTop = st;
 });
 
-var poetry, books, alliteration, gertrude, meep, lyricism, enjambment, page, anaphora, whitespace;
-
+var words = ['mov/alliteration.mp3', 'mov/anaphora.mp3', 'mov/books.mp3', 'mov/enjambment.mp3', 'mov/gertrude.mp3', 'mov/lyricism.mp3', 'mov/poetry.mp3', 'mov/whitespace.mp3'];
 var explosions = ['mov/explo1.gif', 'mov/explo2.gif', 'mov/explo3.gif', 'mov/explo4.gif'];
 var sounds = ['mov/sound1.mp3', 'mov/sound2.mp3', 'mov/sound3.mp3', 'mov/sound4.mp3'];
 
-Mousetrap.bind('a', function() {
-  randExplo();
+Mousetrap.bind(['a', 'q', 'w', 'e', 'r', 'y', 'u', 'i', 'o', 'p', 'a', 'g', 'h', 'l', 'z', 'x', 'c', 'v', 'b', 'm'], function() {
+  randExplo();  
 });
 
-Mousetrap.bind('s', function() {
-  randExplo();
+Mousetrap.bind(['d'], function() {
+    var audio = new Audio(words[0]);
+    audio.volume=0.7;
+    audio.play();
 });
 
-Mousetrap.bind('d', function() {
-  randExplo();
+Mousetrap.bind(['t'], function() {
+    var audio = new Audio(words[1]);
+    audio.volume=0.7;
+    audio.play();
 });
 
-Mousetrap.bind('f', function() {
-  randExplo();
+Mousetrap.bind(['j'], function() {
+    var audio = new Audio(words[2]);
+    audio.volume=0.7;
+    audio.play();
 });
 
-Mousetrap.bind('g', function() {
-  randExplo();
+Mousetrap.bind(['v'], function() {
+    var audio = new Audio(words[3]);
+    audio.volume=0.7;
+    audio.play();
 });
 
-Mousetrap.bind('h', function() {
-  randExplo();
+Mousetrap.bind(['n'], function() {
+    var audio = new Audio(words[4]);
+    audio.volume=0.7;
+    audio.play();
 });
 
-Mousetrap.bind('j', function() {
-  randExplo();
+Mousetrap.bind(['k'], function() {
+    var audio = new Audio(words[5]);
+    audio.volume=0.7;
+    audio.play();
 });
 
-Mousetrap.bind('k', function() {
-  randExplo();
+Mousetrap.bind(['f'], function() {
+    var audio = new Audio(words[6]);
+    audio.volume=0.7;
+    audio.play();
 });
 
-Mousetrap.bind('l', function() {
-  randExplo();
+Mousetrap.bind(['s'], function() {
+    var audio = new Audio(words[7]);
+    audio.volume=0.7;
+    audio.play();
 });
+
+
+ 
+
 
 function randExplo() {
     var audio = new Audio(sounds[getRandomInt(0, 4)]);
-    console.log(audio);
+    audio.volume=0.2;
     audio.play();
 
     // vary size for fun
@@ -104,7 +119,15 @@ function getRandomInt(min, max) {
 document.addEventListener("touchstart", touch, true);
 
 function touch() {
-  randExplo();
+  var choice = getRandomInt(0, 2);
+  if (choice==0) {
+    randExplo();  
+  } else {
+    var audio = new Audio(words[getRandomInt(0, words.length)]);
+    audio.volume=0.7;
+    audio.play();
+  }
+  
 }
 
 // Mousetrap.bind('q', function() { 
