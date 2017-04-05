@@ -6,9 +6,9 @@ var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
    if (st > lastScrollTop){
-       $('#bottom').stop(true, true).slideDown();
+       $('#bottom').stop().slideDown();
    } else {
-      $('#bottom').stop(true, true).slideUp();
+      $('#bottom').stop().slideUp();
    }
    lastScrollTop = st;
 });
