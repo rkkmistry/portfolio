@@ -2,16 +2,20 @@ setTimeout(function() {
   $('#top').slideUp();
 }, 3000);
 
-var lastScrollTop = 0;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();
-   if (st > lastScrollTop){
-       $('#bottom').stop().slideDown();
-   } else {
-      $('#bottom').stop().slideUp();
-   }
-   lastScrollTop = st;
-});
+setTimeout(function() {
+  $('#bottom').slideDown();
+}, 2000);
+
+// var lastScrollTop = 0;
+// $(window).scroll(function(event){
+//    var st = $(this).scrollTop();
+//    if (st > lastScrollTop){
+//        $('#bottom').slideDown();
+//    } else {
+//       $('#bottom').stop(true, true).slideUp();
+//    }
+//    lastScrollTop = st;
+// });
 
 var words = ['alliteration', 'anaphora', 'books', 'enjambment', 'gertrude stein', 'lyricism', 'poetry', 'whitespace'];
 var explosions = ['mov/explo1.gif', 'mov/explo2.gif', 'mov/explo3.gif', 'mov/explo4.gif'];
@@ -142,17 +146,16 @@ function getRandomInt(min, max) {
 document.addEventListener("touchstart", touch, true);
 
 function touch() {
-  var choice = getRandomInt(0, 2);
-  if (choice==0) {
+  randExplo();  
+  setTimeout(function(){
     randExplo();  
-  } else {
-    var theword = words[getRandomInt(0, words.length)];
-    var audio = new Audio("mov/"+ theword +".mp3");
-    audio.volume=0.7;
-    audio.play();
-    textAppear(theword);
-  }
+  }, getRandomInt(300, 700));
   
+  // var theword = words[getRandomInt(0, words.length)];
+  // var audio = new Audio("mov/"+ theword +".mp3");
+  // audio.volume=0.7;
+  // audio.play();
+  // textAppear(theword);
 }
 
 // Mousetrap.bind('q', function() { 
