@@ -59,14 +59,18 @@ body {
 }
 
 /*For Gif explosions*/
-#gif{
+#gif, .text{
   z-index: -1;
   /*So works on Safari*/
   -webkit-transform: translate3d(0,0,0);
 }
 
+.text {
+  color: #f1c40f;
+}
+
 /*For Markov Text*/
-#text {
+#markov-text {
   width: 50%;
   margin: 60px auto;
   line-height: 2em;
@@ -105,7 +109,7 @@ a:active  {
 /*~~~MOBILE STYLING~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media (max-width: 900px) { 
-  #text {
+  #markov-text {
     width: 90%;
     font-size: 1.5em;
     text-justify: full;

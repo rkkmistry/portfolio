@@ -15,7 +15,7 @@ Array.prototype.choice = function() {
 markov.feed(lines);
 
 console.log(markov.generate());
-$('#text').html(markov.generate());
+$('#markov-text').html(markov.generate());
 
 // A MarkovGenerate object
 function MarkovGenerator(n, max) {
