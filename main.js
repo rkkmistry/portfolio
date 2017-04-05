@@ -101,7 +101,7 @@ Mousetrap.bind(['s'], function() {
         'top':posy+'px'
     }).appendTo( 'body' );
 
-    output.addClass('animated zoomIn').delay(5000).fadeOut(500, function(){
+    output.addClass('animated zoomIn').delay(3500).fadeOut(500, function(){
       $(this).remove();
     }); 
 }
