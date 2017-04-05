@@ -120,6 +120,10 @@ a:active  {
     display: none;
   }
 
+  #top {
+    display: none;
+  }
+
   body:before {
     content: "";
     display: block;
