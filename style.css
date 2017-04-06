@@ -80,14 +80,19 @@ body {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~PORTFOLIO PAGE STYLING~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-h1 {
-  text-align: center;
-  font-weight: 400;
-}
-
 #container {
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+#container h4 {
+  font-size: 0.8em;
+}
+
+#container h2 {
+  font-size: 1.5em;
 }
 
 /*Link Styling*/
@@ -143,18 +148,11 @@ a:active  {
   /*Portfolio Styling*/
   #container {
     width: 90%;
-    margin: 20px auto;
     line-height: 1.2em;
-    font-size: 1.2em;
-
   }
 
   #container h4 {
     display: none;
-  }
-
-  #container h2 {
-    font-size: 1.5em;
   }
 
   hr:nth-of-type(3) {
