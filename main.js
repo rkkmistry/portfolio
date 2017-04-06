@@ -1,6 +1,6 @@
 setTimeout(function() {
   $('#top').slideUp();
-}, 3000);
+}, 10000);
 
 setTimeout(function() {
   $('#bottom').slideDown();
@@ -21,11 +21,11 @@ var words = ['alliteration', 'anaphora', 'books', 'enjambment', 'gertrude stein'
 var explosions = ['mov/explo1.gif', 'mov/explo2.gif', 'mov/explo3.gif', 'mov/explo4.gif'];
 var sounds = ['mov/sound1.mp3', 'mov/sound2.mp3', 'mov/sound3.mp3', 'mov/sound4.mp3'];
 
-Mousetrap.bind(['a', 'q', 'w', 'e', 'r', 'y', 'u', 'i', 'o', 'p', 'a', 'g', 'h', 'l', 'z', 'x', 'c', 'v', 'b', 'm'], function() {
+Mousetrap.bind(['a', 'q', 'e', 'y', 'u', 'o', 'g', 'h', 'l', 'z', 'c', 'v', 'm'], function() {
   randExplo();  
 });
 
-Mousetrap.bind(['d'], function() {
+Mousetrap.bind(['d', 'p'], function() {
     var audio = new Audio("mov/"+words[0]+".mp3");
     audio.volume=0.7;
     audio.play();
@@ -39,35 +39,35 @@ Mousetrap.bind(['t'], function() {
     textAppear(words[1])
 });
 
-Mousetrap.bind(['j'], function() {
+Mousetrap.bind(['j', 'r'], function() {
     var audio = new Audio("mov/"+words[2]+".mp3");
     audio.volume=0.7;
     audio.play();
     textAppear(words[2])
 });
 
-Mousetrap.bind(['v'], function() {
+Mousetrap.bind(['v', 'i'], function() {
     var audio = new Audio("mov/"+words[3]+".mp3");
     audio.volume=0.7;
     audio.play();
     textAppear(words[3])
 });
 
-Mousetrap.bind(['n'], function() {
+Mousetrap.bind(['n', 'w'], function() {
     var audio = new Audio("mov/"+words[4]+".mp3");
     audio.volume=0.7;
     audio.play();
     textAppear(words[4])
 });
 
-Mousetrap.bind(['k'], function() {
+Mousetrap.bind(['k', 'x'], function() {
     var audio = new Audio("mov/"+words[5]+".mp3");
     audio.volume=0.7;
     audio.play();
     textAppear(words[5])
 });
 
-Mousetrap.bind(['f'], function() {
+Mousetrap.bind(['f', 'b'], function() {
     var audio = new Audio("mov/"+words[6]+".mp3");
     audio.volume=0.7;
     audio.play();
