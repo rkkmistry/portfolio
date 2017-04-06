@@ -24,8 +24,19 @@ body {
 }
 
 #top {
+  position: static;
+  z-index: 0;
   background-color: gray;
   top: 0;
+}
+
+#mobile-text {
+  display: none;  
+}
+  
+#desktop-text {
+  display: inline-block;
+  
 }
 
 #bottom:hover {
@@ -72,7 +83,7 @@ body {
 /*For Markov Text*/
 #markov-text {
   width: 50%;
-  margin: 60px auto;
+  margin: 10px auto;
   line-height: 2em;
   font-size: 2em;
 }
@@ -130,7 +141,11 @@ a:active  {
     display: none;
   }
 
-  #top {
+  #mobile-text {
+    display: inline-block;
+  }
+
+  #desktop-text {
     display: none;
   }
 
