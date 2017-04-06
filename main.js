@@ -27,56 +27,56 @@ Mousetrap.bind(['a', 'q', 'e', 'y', 'u', 'o', 'g', 'h', 'l', 'z', 'c', 'v', 'm']
 
 Mousetrap.bind(['d', 'p'], function() {
     var audio = new Audio("mov/"+words[0]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[0])
 });
 
 Mousetrap.bind(['t'], function() {
     var audio = new Audio("mov/"+words[1]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[1])
 });
 
 Mousetrap.bind(['j', 'r'], function() {
     var audio = new Audio("mov/"+words[2]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[2])
 });
 
 Mousetrap.bind(['v', 'i'], function() {
     var audio = new Audio("mov/"+words[3]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[3])
 });
 
 Mousetrap.bind(['n', 'w'], function() {
     var audio = new Audio("mov/"+words[4]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[4])
 });
 
 Mousetrap.bind(['k', 'x'], function() {
     var audio = new Audio("mov/"+words[5]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[5])
 });
 
 Mousetrap.bind(['f', 'b'], function() {
     var audio = new Audio("mov/"+words[6]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[6])
 });
 
 Mousetrap.bind(['s'], function() {
     var audio = new Audio("mov/"+words[7]+".mp3");
-    audio.volume=0.7;
+    audio.volume=0.5;
     audio.play();
     textAppear(words[7])
 });
@@ -108,7 +108,7 @@ Mousetrap.bind(['s'], function() {
 
 function randExplo() {
     var audio = new Audio(sounds[getRandomInt(0, 4)]);
-    audio.volume=0.2;
+    audio.volume=0.5;
     audio.play();
 
     // vary size for fun
@@ -153,7 +153,7 @@ function touch() {
   
   // var theword = words[getRandomInt(0, words.length)];
   // var audio = new Audio("mov/"+ theword +".mp3");
-  // audio.volume=0.7;
+  // audio.volume=0.5;
   // audio.play();
   // textAppear(theword);
 }
