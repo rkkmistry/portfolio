@@ -175,8 +175,12 @@ a:active  {
     display: none;
   }
 
-  hr:nth-of-type(3) {
+  /*hr:nth-of-type(3) {
     display: none;
+  }*/
+
+  select, input {
+    margin-bottom: 15px;
   }
 
   h3 {
